@@ -1,0 +1,25 @@
+{
+  "name": "insomnia-plugin-token-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "private": true,
+  "insomnia": {
+    "name": "token-retriever",
+    "description": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "iconv-lite": "^0.4.19"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5",
+    "@types/node": "^14.0.13"
+  }
+}
