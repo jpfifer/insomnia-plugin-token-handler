@@ -12,8 +12,10 @@
     "name": "token-retriever",
     "description": ""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "insomnia"
+  ],
+  "author": "Justin Pfifer",
   "license": "ISC",
   "dependencies": {
     "iconv-lite": "^0.4.19"

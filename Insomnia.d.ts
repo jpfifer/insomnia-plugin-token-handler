@@ -67,9 +67,29 @@ declare module Insomnia {
   }
 
   interface Context {
+    app: App.App;
     network: Network;
     store: Store;
     util: Util.Util;
+  }
+}
+
+declare module Insomnia.App {
+
+  interface SaveOptions {
+    defaultPath?: string
+  }
+
+  interface App {
+    alert(title: string, message?: string): Promise<void>
+    prompt(title: string, options?: {
+      label?: string,
+      defaultValue?: string,
+      submitName?: string,
+      cancelable?: boolean,
+    }): Promise<string>
+    getPath(name: 'desktop'): string
+    showSaveDialog(options: SaveOptions): Promise<string | null>
   }
 }
 
