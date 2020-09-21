@@ -132,37 +132,3 @@ export const templateTags: Insomnia.TemplateTag[] = [
     }
   }
 ];
-
-export const requestGroupActions = [
-  {
-    label: 'Review Requests',
-    action: async (context, data: { requests: Request[] }) => {
-      const {requests} = data;
-      requests.forEach(r => console.log(`Request: ${r.name}`, r.authentication));
-    }
-  },
-  {
-    label: 'Update Named Request',
-    action: async (context: Insomnia.Context, data: { requests: Request[] }) => {
-      const {requests} = data;
-      const result = await context.app.prompt("Request Named", {
-        label: "Request Name"
-      })
-      requests.filter(r => r.name === result).forEach(r => {
-        const t = {
-          accessTokenUrl: "{{ auth_endpoint }}/identity/connect/token",
-          authorizationUrl: "{{ auth_endpoint }}",
-          clientId: "{{ inventory.client_id }}",
-          clientSecret: "{{ inventory.secret }}",
-          credentialsInBody: true,
-          grantType: "client_credentials",
-          scope: "{{ inventory.scope }}",
-          type: "oauth2"
-        }
-        console.log(`Request: ${r.name}`, r.authentication)
-        r.authentication = t;
-        console.log(`Post Request: ${r.name}`, r.authentication)
-      });
-    }
-  }
-]
