@@ -1,16 +1,23 @@
 {
-  "name": "insomnia-plugin-token-handler",
+  "name": "insomnia-plugin-jwt-token-retriever",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Insomnia plugin to retrieve jwt tokens and automatically refresh them",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpfifer/insomnia-plugin-token-handler.git"
+  },
+  "homepage": "https://github.com/jpfifer/insomnia-plugin-token-handler",
+  "bugs": {
+    "url": "https://github.com/jpfifer/insomnia-plugin-token-handler/issues"
+  },
   "insomnia": {
-    "name": "token-retriever",
-    "description": ""
+    "name": "jwt-token-retriever",
+    "description": "Retrieves JWT tokens from other requests and makes them available for use."
   },
   "keywords": [
     "insomnia"

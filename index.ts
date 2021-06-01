@@ -1,48 +1,6 @@
 import * as iconv from 'iconv-lite'
 import Request = Insomnia.Request.Request;
 
-// type BaseTemplateArgument = {
-//   displayName: string;
-//   description?: string;
-//   defaultValue?: string | number | boolean | null;
-//   type: 'string' | 'number' | 'enum' | 'model';
-// };
-//
-// type StringTemplateArgument = {
-//   type: 'string';
-//   placeholder?: string;
-// };
-//
-// type ModelTemplateArgument = {
-//   type: 'model';
-//   model: string;
-// };
-//
-// type EnumTemplateArgument = {
-//   type: 'enum';
-//   options: [{
-//     displayName: string;
-//     value: string;
-//     description?: string;
-//     placeholder?: string;
-//   }]
-// }
-//
-// type TemplateArgument = BaseTemplateArgument & (StringTemplateArgument | ModelTemplateArgument | EnumTemplateArgument);
-//
-// type TemplateTag = {
-//   name: string,
-//   displayName: string,
-//   disablePreview?: () => boolean,
-//   description?: string,
-//   deprecated?: boolean,
-//   liveDisplayName?: (args) => string | null,
-//   validate?: (value: any) => string | null,
-//   priority?: number,
-//   args: TemplateArgument[],
-//   run(...any): any
-// };
-
 type TokenResponse = {
   access_token: string;
   expires_in: number;
